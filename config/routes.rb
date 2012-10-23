@@ -1,4 +1,8 @@
 Boathouse::Application.routes.draw do
+
+  resource :leaderboard
+  root :to => 'leaderboard#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
