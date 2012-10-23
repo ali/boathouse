@@ -18,6 +18,8 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'compass-rails', '~> 1.0.3'
+  gem 'zurb-foundation', '~> 3.1.1'
 end
 
 gem 'jquery-rails'
@@ -29,7 +31,6 @@ group :test do
   gem 'guard-rspec'
   gem 'rb-fsevent'
 end
-
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
