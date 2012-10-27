@@ -64,6 +64,8 @@ GEM
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
     ffi (1.1.5)
+    figaro (0.4.1)
+      rails (~> 3.0)
     fssm (0.2.9)
     guard (1.4.0)
       listen (>= 0.4.2)
@@ -174,6 +176,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails (~> 1.0.3)
   factory_girl_rails
+  figaro
   guard-rspec
   jquery-rails
   rails (= 3.2.8)
