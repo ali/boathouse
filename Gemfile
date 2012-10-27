@@ -32,7 +32,7 @@ group :test do
   gem 'rb-fsevent'
 end
 
-gem 'figaro'
+gem 'settingslogic'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
