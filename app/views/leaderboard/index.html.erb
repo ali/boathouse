@@ -1,7 +1,11 @@
-<div class="row">
-  <header>
-    <h1>Leaderboard</h1>
-  </header>
+<header id="header" class="row">
+  <h1>Leaderboard</h1>
+</header>
 
-  <p>leaderboard#index</p>
+<div class="row">
+  <ol>
+  <% @users.each do |user| %>
+    <li><%= user.handle %></li>
+  <% end %>
+  </ol>
 </div>

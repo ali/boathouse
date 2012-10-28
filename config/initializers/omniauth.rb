@@ -1,3 +1,5 @@
+OmniAuth.config.logger = Rails.logger
+
 # Settings in config/application.yml
 if Settings.ldap
   ldap = Settings.ldap

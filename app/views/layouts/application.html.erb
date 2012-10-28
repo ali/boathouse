@@ -13,7 +13,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "CREW" %></title>
 
   <!-- Included CSS Files -->
   <%= stylesheet_link_tag    "application" %>
@@ -25,12 +25,8 @@
 </head>
 <body>
   <%= render 'shared/header' %>
+  <%= render 'shared/notices' %>
 
   <%= yield %>
-
-  <footer class="row">
-    <hr />
-    <p>sudo hi chris</p>
-  </footer>
 </body>
 </html>
