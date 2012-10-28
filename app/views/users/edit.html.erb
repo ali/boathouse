@@ -1,0 +1,12 @@
+<header class="row">
+  <h1>Edit your profile</h1>
+</header>
+
+<div class="row">
+  <%= simple_form_for @user do |f| %>
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
+

@@ -1,11 +1,12 @@
 Boathouse::Application.routes.draw do
-
-  resource :leaderboard
-  root :to => 'leaderboard#index'
+  resources :users, only: [:show, :edit, :update]
 
   match 'auth/:provider/callback', to: 'sessions#create'
-  match 'auth/failure', to: redirect('/')
+  match 'login', to: 'sessions#new', as: 'login'
   match 'logout', to: 'sessions#destroy', as: 'logout'
+  match 'auth/failure', to: redirect('/')
+
+  root to: 'leaderboard#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

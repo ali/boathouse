@@ -14,10 +14,12 @@
     <ul class="right">
       <% if current_user %>
         <li class="has-dropdown">
-          <a href="#">Logged in as <strong><%= current_user.email %></strong></a>
+          <a href="#"><strong><%= current_user.handle %></strong></a>
 
           <ul class="dropdown">
-            <li><%= link_to 'Edit profile', '#' %></li>
+            <li><%= link_to 'Your profile', current_user %></li>
+            <li><%= link_to 'Edit profile', edit_user_path(current_user) %></li>
+            <li class="divider"></li>
             <li><%= link_to "Logout", logout_path %></li>
           </ul>
         </li>
