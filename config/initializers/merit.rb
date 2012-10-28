@@ -15,11 +15,12 @@ end
 
 # Create application badges (uses https://github.com/norman/ambry)
 Badge.create!({
-  :id => 1,
-  :name => 'fresh-meat'
+  id: 1,
+  name: 'Fresh Meat'
 })
 
 Badge.create!({
-  :id => 2,
-  :name => 'crewbie'
+  id: 2,
+  name: 'Crewbie',
+  description: 'Welcome aboard!'
 })

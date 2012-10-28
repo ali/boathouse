@@ -17,7 +17,5 @@ class User < ActiveRecord::Base
       user.name = auth['info']['name']
       user.email = auth['info']['email']
     end
-
-    create_sash_if_none
   end
 end

@@ -21,9 +21,13 @@ module Merit
     def initialize
       # If it creates user, grant badge
       # Should be "current_user" after registration for badge to be granted.
-      #
-      # (NOTE: This doesn't work with Omniauth afaik)
-      # grant_on 'sessions#create', badge: 'fresh-meat', to: current_user
+      grant_on 'sessions#create',
+        badge: 'Fresh Meat',
+        model_name: 'User'
+
+      grant_on 'sessions#create',
+        badge: 'Crewbie',
+        model_name: 'User'
 
       # If it has 10 comments, grant commenter-10 badge
       # grant_on 'comments#create', :badge => 'commenter', :level => 10 do |comment|
