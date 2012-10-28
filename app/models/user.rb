@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_merit
+
   attr_accessible :email, :name
   validates :email, presence: true, uniqueness: true
   validates :name, presence: true, uniqueness: true
@@ -8,13 +10,6 @@ class User < ActiveRecord::Base
   end
 
   def self.create_from_omniauth(auth)
-    logger.debug auth
-    logger.debug auth['provider']
-    logger.debug auth['uid']
-    logger.debug auth['info']['nickname']
-    logger.debug auth['info']['name']
-    logger.debug auth['info']['email']
-
     create! do |user|
       user.provider = auth['provider']
       user.uid = auth['uid']
@@ -22,5 +17,7 @@ class User < ActiveRecord::Base
       user.name = auth['info']['name']
       user.email = auth['info']['email']
     end
+
+    create_sash_if_none
   end
 end
