@@ -96,6 +96,7 @@ GEM
       sassy-math (>= 1.2)
     multi_json (1.3.6)
     net-ldap (0.2.2)
+    newrelic_rpm (3.5.0.1)
     nokogiri (1.5.5)
     omniauth (1.1.1)
       hashie (~> 1.2)
@@ -199,6 +200,7 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   merit
+  newrelic_rpm
   omniauth-ldap
   rails (= 3.2.8)
   rb-fsevent
