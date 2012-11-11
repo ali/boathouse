@@ -1,7 +1,7 @@
 <header class="row">
   <h1>
     <%= @user.handle %>
-    <small><%= pluralize(@user.points, 'points') %></small>
+    <small><%= @user.name %> (<%= pluralize(@user.points, 'points') %>)</small>
   </h1>
 </header>
 
@@ -10,8 +10,13 @@
 </div>
 
 <div id="badges" class="row">
-  <h2>Badges</h2>
-  <ul class="row">
-    <%= render collection: @user.badges, partial: 'users/badge' %>
-  </ul>
+  <h3>Badges</h3>
+  <% if @user.badges.count > 0 %>
+    <ul class="row">
+      <%= render collection: @user.badges, partial: 'users/badge' %>
+    </ul>
+  <% else %>
+    <p><%= "#{@user.name} doesn't have any badges yet. :(" %></p>
+  <% end %>
+</ul>
 </div>

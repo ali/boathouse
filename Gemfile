@@ -34,6 +34,7 @@ end
 
 gem 'settingslogic'
 gem 'omniauth-ldap'
+gem 'cancan'
 
 gem 'simple_form'
 gem 'merit'

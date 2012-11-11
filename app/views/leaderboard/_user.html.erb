@@ -1,0 +1,9 @@
+<li class="user">
+  <h3>
+    <%= link_to user.handle, user %>
+    <small><%= pluralize(user.points, 'points') %></small>
+  </h3>
+  <div class="progress secondary twelve">
+    <span class="meter" style="width: <%= user.ranked_points%>%"></span>
+  </div>
+</li>
