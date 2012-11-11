@@ -16,7 +16,8 @@ end
 # Create application badges (uses https://github.com/norman/ambry)
 Badge.create!({
   id: 1,
-  name: 'Fresh Meat'
+  name: 'Fresh Meat',
+  image: 'fresh-meat.svg',
 })
 
 Badge.create!({

@@ -1,7 +1,7 @@
 <header class="row">
   <h1>
     <%= @user.handle %>
-    <small><%= pluralize(@user.points, 'points') %>
+    <small><%= pluralize(@user.points, 'points') %></small>
   </h1>
 </header>
 
@@ -9,13 +9,9 @@
   <p>I'm in Crew!</p>
 </div>
 
-<div class="row">
+<div id="badges" class="row">
   <h2>Badges</h2>
-  <ul>
-    <% @user.badges.each do |badge| %>
-      <li class="badge">
-        <%= badge.name %>
-      </li>
-    <% end %>
+  <ul class="row">
+    <%= render collection: @user.badges, partial: 'users/badge' %>
   </ul>
 </div>

@@ -4,8 +4,8 @@
 
 // Grid Settings
 
-// $rowWidth: 1000px;
-// $columnGutter: 30px;
+$rowWidth: 500px;
+$columnGutter: 30px;
 // $totalColumns: 12;
 // $mobileTotalColumns: 4;
 
@@ -105,3 +105,15 @@
 // $topBarBreakPoint: 940px; // Change to 9999px for always mobile layout
 // $topBarNavToggleSize: 8px;
 @import 'foundation';
+
+div#badges ul {
+  li.badge {
+    @extend .two, .columns;
+
+    margin: 0 15px;
+  }
+
+  li.badge:last-child {
+    @extend .end;
+  }
+}

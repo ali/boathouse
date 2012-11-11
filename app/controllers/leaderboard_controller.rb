@@ -1,5 +1,5 @@
 class LeaderboardController < ApplicationController
   def index
-    @users = User.all
+    @users = User.ranked
   end
 end

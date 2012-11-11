@@ -1,0 +1,9 @@
+<li class="badge">
+  <h4><%= badge.name %></h4>
+
+  <%= image_tag badge.image if badge.image %>
+
+  <p><% if badge.description %>
+    <%= "#{badge.description}" %>
+  <% end %></p>
+</li>
